@@ -37,8 +37,9 @@ body {
 }
 input,
 button,
-textarea {
+textarea, a {
     font-family: inherit;
+    color: inherit;
 }
 input::-ms-clear {
     display: none;
@@ -73,12 +74,6 @@ h6 {
     font-weight: inherit;
 }
 
-
-
-
-
-
-
 /* General Styling */
 
 .wrapper {
@@ -87,11 +82,12 @@ h6 {
 
 body {
     font-family: Poppins, Tahoma, Geneva, Verdana, sans-serifs;
-    background-color: whitesmoke;
+    background-color: #fffbeb;
 }
 
-img, video {
-    max-width: 100%;;
+img,
+video {
+    max-width: 100%;
 }
 
 h1 {
@@ -105,7 +101,7 @@ h2 {
     font-weight: bolder;
 }
 
-h4{
+h4 {
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -125,7 +121,7 @@ h4{
     padding: 0 24px;
     border-bottom: black solid 1px;
     position: fixed;
-    background-color:white;
+    background-color: #fffbeb;
     top: 0;
     left: 0;
     z-index: 999;
@@ -164,15 +160,15 @@ h4{
 }
 
 .menu a:active {
-  background-color: navy;
-  transition-property: background;
-  transition-duration: 0s;
-  transition-timing-function: linear;
-  transition-delay: 0s;
+    background-color: #263159;
+    transition-property: background;
+    transition-duration: 0s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
 }
 
 .black {
-    background-color: navy;
+    background-color: #263159;
     color: whitesmoke;
     border-radius: 25px;
     padding: 0.7rem;
@@ -183,9 +179,11 @@ h4{
 
 .banner {
     padding: 6rem 0 2rem 1.5rem;
-    background-color:rgb(201, 203, 208);
+    background-color: #495579;
     /* display: flex;
     width: 100%; */
+    display: flex;
+    min-height: 100vh;
 }
 
 .banner__container {
@@ -203,7 +201,6 @@ h4{
     overflow: hidden;
 }
 
-
 .banner__text {
     /* flex: 1 1 40%; */
     display: flex;
@@ -211,6 +208,7 @@ h4{
     align-items: flex-start;
     width: 40%;
     padding: 0 2rem;
+    color: #fffbeb;
 }
 
 .banner__text h4 {
@@ -218,23 +216,40 @@ h4{
     margin-bottom: 2.5rem;
 }
 
-button {
+.banner__text .button {
     align-self: center;
-    background-color: black
 }
 
-button a {
+.banner__text .button a {
+    padding: 1rem 6rem;
+    background-color: #263159;
+    color: #fffbeb;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* .banner__text .button a {
+    color: #fffbeb;
+} */
+
+/* button a {
     padding: 0.5rem 6rem;
-    background-color: black;
-    color: white;
+    background-color: #263159;
+    color: #fffbeb;
     font-size: 1.1rem;
     border-radius: 10px;
     transition: background-color 200ms ease-in;
-}
+} */
 
-button a:hover {
-    background-color: navy;
-    color: white;
+.banner__text .button a:hover {
+    background-color: #fffbeb;
+    color: #495579 ; 
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1.25rem 7rem;
 }
 
 /* Posts Styling */
@@ -245,59 +260,132 @@ button a:hover {
 
 .posts {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    color: #263159;
 }
 
-.container {
-    display: flex;
+.main__post {
+    width: 60%;
+    margin: 2rem 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main__post img {
     width: 100%;
-    padding: 32px 0 32px 24px;
-    align-items: stretch;
 }
 
-.main__container {
-    flex: 0 0 60%;
-    padding-right: 1.5rem;
-}
-
-.side__container {
+.side__posts {
+    display: flex;
     width: 40%;
-    display: flex;
     flex-direction: column;
-    background-color: blue;
-    justify-content: flex-start;
+    margin: 0;
+    align-items: flex-start;
+    padding-top: 1rem;
 }
 
-.side {
+.side__post {
     display: flex;
-    /* justify-content: flex-start; */
+    align-items: center;
     width: 100%;
     height: auto;
-    
+    transition: all 0.5s ease;
 }
 
-.side__img {
+.side__post:hover {
+    color: #fffbeb;
+    background-color: #495579;
+    padding: 0.5rem 0 0.5rem 0;
+    cursor: pointer;
+}
+
+.post__img {
     width: 35%;
-    /* padding: 0rem 1rem 1rem 1rem; */
+    margin: 1rem;
 }
 
-post-3__container {
-
+.main__text h2 {
+    padding: 1rem 0;
 }
 
-/* .post-1__container .side__img {
-    padding-top: 0;
-} */
-
-.side__text {
-    align-sef: center;
+.main__text h5 {
+    padding-top: 2rem;
+    font-weight: bold;
 }
 
-/* .post-big__img__container {
-    width: 100%;
+.post__text p {
+    margin: 0.8rem 0;
 }
 
-.post-big__img__container img {
-    width: 100%;
-    object-fit: cover;
-} */
+.post__text {
+    padding-right: 2rem;
+}
+
+.post__text a {
+    background-color: #251749;
+    padding: 5px;
+    color: #fffbeb;
+    font-size: 80%;
+    transition: all 250ms ease-in;
+}
+
+.post__text a:hover {
+    background-color: #fffbeb;
+    color: #251749;
+}
+
+/* Course Styling */
+
+.course-mobile {
+    display: none;
+}
+
+.courses {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #495579;
+    color: #fffbeb;
+}
+
+.courses h2 {
+    padding-top: 2rem;
+}
+
+.courses__container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 30.5%);
+    padding: 32px 72px;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.course__container {
+    background-color: #fffbeb;
+    color: #263159;
+    border: 2px solid #fffbeb;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in;
+}
+
+.course__container:hover {
+    box-shadow: 0.2px 0.2px 0.3px hsl(228deg 33% 13% / 0.23),
+        1.2px 1.5px 2.3px -0.3px hsl(228deg 33% 13% / 0.25),
+        2.3px 2.7px 4.3px -0.6px hsl(228deg 33% 13% / 0.27),
+        3.6px 4.3px 6.8px -0.8px hsl(228deg 33% 13% / 0.28),
+        5.5px 6.6px 10.4px -1.1px hsl(228deg 33% 13% / 0.3),
+        8.3px 10px 15.7px -1.4px hsl(228deg 33% 13% / 0.32),
+        12.3px 14.8px 23.2px -1.7px hsl(228deg 33% 13% / 0.33),
+        17.9px 21.5px 33.8px -1.9px hsl(228deg 33% 13% / 0.35);
+}
+
+.course__text__container {
+    padding: 1rem;
+}
+
+.p-big {
+    font-weight: 100;
+    font-size: 120%;
+    margin: 1rem 0;
+}
