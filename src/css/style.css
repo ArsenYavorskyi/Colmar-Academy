@@ -37,7 +37,8 @@ body {
 }
 input,
 button,
-textarea, a {
+textarea,
+a {
     font-family: inherit;
     color: inherit;
 }
@@ -195,10 +196,10 @@ h4 {
 
 .banner__container img {
     flex: 1 0 60%;
-    /* flex: 0 0 60%;
-    height: 100%;  */
+    height: 100%;  
     border-radius: 20px;
     overflow: hidden;
+    object-fit: cover;
 }
 
 .banner__text {
@@ -213,7 +214,7 @@ h4 {
 
 .banner__text h4 {
     margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .banner__text .button {
@@ -229,27 +230,35 @@ h4 {
     transition: all 200ms ease-in;
     cursor: pointer;
     text-align: center;
+    box-shadow: 0.2px 0.2px 0.3px hsl(228deg 33% 13% / 0.25),
+        0.7px 0.8px 1.3px -0.6px hsl(228deg 33% 13% / 0.29),
+        1.6px 2px 3.1px -1.3px hsl(228deg 33% 13% / 0.32),
+        3.8px 4.5px 7.1px -1.9px hsl(228deg 33% 13% / 0.36);
 }
-
-/* .banner__text .button a {
-    color: #fffbeb;
-} */
-
-/* button a {
-    padding: 0.5rem 6rem;
-    background-color: #263159;
-    color: #fffbeb;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    transition: background-color 200ms ease-in;
-} */
 
 .banner__text .button a:hover {
     background-color: #fffbeb;
-    color: #495579 ; 
+    color: #495579;
     font-size: 1.3rem;
     font-weight: bold;
     padding: 1.25rem 7rem;
+    box-shadow: 0.2px 0.2px 0.3px hsl(228deg 33% 13% / 0.23),
+        1.2px 1.5px 2.3px -0.3px hsl(228deg 33% 13% / 0.25),
+        2.3px 2.7px 4.3px -0.6px hsl(228deg 33% 13% / 0.27),
+        3.6px 4.3px 6.8px -0.8px hsl(228deg 33% 13% / 0.28),
+        5.5px 6.6px 10.4px -1.1px hsl(228deg 33% 13% / 0.3),
+        8.3px 10px 15.7px -1.4px hsl(228deg 33% 13% / 0.32),
+        12.3px 14.8px 23.2px -1.7px hsl(228deg 33% 13% / 0.33),
+        17.9px 21.5px 33.8px -1.9px hsl(228deg 33% 13% / 0.35);
+}
+
+.banner__text .button a:active {
+    color: #fffbeb;
+    background-color: #263159;
+    transition-property: background, color;
+    transition-duration: 0s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
 }
 
 /* Posts Styling */
@@ -326,6 +335,10 @@ h4 {
     color: #fffbeb;
     font-size: 80%;
     transition: all 250ms ease-in;
+    display: block;
+    text-align: center;
+    width: 5rem;
+    border-radius: 5px;
 }
 
 .post__text a:hover {
@@ -366,7 +379,7 @@ h4 {
     border: 2px solid #fffbeb;
     border-radius: 20px;
     overflow: hidden;
-    transition: box-shadow 0.3s ease-in;
+    transition: all 0.3s ease-in;
     cursor: pointer;
 }
 
@@ -379,10 +392,15 @@ h4 {
         8.3px 10px 15.7px -1.4px hsl(228deg 33% 13% / 0.32),
         12.3px 14.8px 23.2px -1.7px hsl(228deg 33% 13% / 0.33),
         17.9px 21.5px 33.8px -1.9px hsl(228deg 33% 13% / 0.35);
+    transform: translate(-5px, -5px);
 }
 
 .course__text__container {
     padding: 1rem;
+}
+
+.course__img__container img {
+    width: 100%;
 }
 
 .p-big {
@@ -390,6 +408,8 @@ h4 {
     font-size: 120%;
     margin: 1rem 0;
 }
+
+/* Thesis Styles */
 
 .thesis {
     display: flex;
@@ -426,3 +446,145 @@ footer {
     gap: 1rem;
 }
 
+/* Media Queris */
+
+@media only screen and (max-width: 840px) {
+
+/* Header Media Queries */
+
+.header__desktop {
+    display: none;
+}
+
+.header__mobile {
+    display: block;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffbeb;
+    z-index: 999;
+}
+
+.icons__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__mobile__link img {
+    width: 2rem;
+}
+
+/* Banner Media Queris */
+
+.banner {
+    padding: 64px 0 2rem 0;
+    min-height: auto;
+}
+
+.banner__container {
+    flex-direction: column;
+}
+
+.banner__container img {
+    height: auto;
+    width: 100%;
+    border-radius: 0px;
+    object-fit: cover;
+    flex: 1 0 50%;
+}
+
+.banner__text {
+    flex: 1 1 auto;
+    display: contents;
+    width: 100% !important;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+.banner__text h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.banner__text h4 {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 50%;
+}
+
+.banner__text .button a {
+    padding: 1rem 10%;
+    transition: none;
+    width: 100%;
+}
+
+.banner__text .button a:hover {
+    padding: 1rem 10%;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+.container {
+    display: contents;
+}
+
+.main__post {
+    display: none;
+}
+
+.side__posts {
+    width: 100%;
+    padding: 1rem 1rem 2rem 1rem;
+    gap: 3rem;
+}
+
+.post__img {
+    display: none;
+}
+
+.post-mobile {
+    display: block;
+    width: 100%;
+}
+
+.side__post {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post__text {
+    padding: 1rem 0 0 1rem;
+}
+
+.side__post:hover {
+    color: #263159;
+    background-color: #fffbeb;
+    padding: 0;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+.banner__container img {
+    flex: 1 0 50%;
+}
+
+    .banner__text {
+        width: 50%;
+    }
+
+}
+    
