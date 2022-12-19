@@ -540,7 +540,7 @@ footer {
         display: contents;
     }
 
-    .main__post {
+    .main-post {
         display: none;
     }
 
@@ -582,6 +582,43 @@ footer {
 
     .courses__container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+
+    .thesis__post p {
+        display: none;
+    }
+
+    .thesis__post h4 {
+        display: none;
+    }
+
+    .thesis__side {
+        display: none;
+    }
+
+    .thesis__container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .thesis__post {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .thesis {
+        text-align: center;
+    }
+
+    .footer ul {
+        display: none;
+    }
+
+    .footer {
+        padding: 1rem 0 1rem 0.5rem;
+        height: auto;
+        display: block;
     }
     
 }
