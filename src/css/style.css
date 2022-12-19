@@ -196,7 +196,7 @@ h4 {
 
 .banner__container img {
     flex: 1 0 60%;
-    height: 100%;  
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
     object-fit: cover;
@@ -363,11 +363,12 @@ h4 {
 
 .courses h2 {
     padding-top: 2rem;
+    text-align: center;
 }
 
 .courses__container {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 30.5%);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
     padding: 32px 72px;
     gap: 2rem;
     justify-content: center;
@@ -449,142 +450,204 @@ footer {
 /* Media Queris */
 
 @media only screen and (max-width: 840px) {
+    /* Header Media Queries */
 
-/* Header Media Queries */
+    .header__desktop {
+        display: none;
+    }
 
-.header__desktop {
-    display: none;
+    .header__mobile {
+        display: block;
+        width: 100%;
+        height: 64px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fffbeb;
+        z-index: 999;
+    }
+
+    .icons__wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .header__mobile__link img {
+        width: 2rem;
+    }
+
+    /* Banner Media Queris */
+
+    .banner {
+        padding: 64px 0 2rem 0;
+        min-height: auto;
+    }
+
+    .banner__container {
+        flex-direction: column;
+    }
+
+    .banner__container img {
+        height: auto;
+        width: 100%;
+        border-radius: 0px;
+        object-fit: cover;
+        flex: 1 0 50%;
+    }
+
+    .banner__text {
+        flex: 1 1 auto;
+        display: contents;
+        width: 100% !important;
+        padding: 2rem 1rem 1rem 1rem;
+        text-align: center;
+    }
+
+    .banner__text h2 {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .banner__text h4 {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        width: 50%;
+    }
+
+    .banner__text .button a {
+        padding: 1rem 10%;
+        transition: none;
+        width: 100%;
+    }
+
+    .banner__text .button a:hover {
+        padding: 1rem 10%;
+        font-weight: normal;
+        font-size: 1.1rem;
+    }
+
+    /* Posts Media Queris */
+    
+    .container {
+        display: contents;
+    }
+
+    .main__post {
+        display: none;
+    }
+
+    .side__posts {
+        width: 100%;
+        padding: 1rem 1rem 2rem 1rem;
+        gap: 3rem;
+    }
+
+    .post__img {
+        display: none;
+    }
+
+    .post-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .side__post {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .post__text {
+        padding: 1rem 0 0 1rem;
+    }
+
+    .side__post:hover {
+        color: #263159;
+        background-color: #fffbeb;
+        padding: 0;
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+
+    /* .course__text__container p {
+        display: none;
+    } */
+
+    .courses__container {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    
 }
 
-.header__mobile {
-    display: block;
-    width: 100%;
-    height: 64px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fffbeb;
-    z-index: 999;
-}
-
-.icons__wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.header__mobile__link img {
-    width: 2rem;
-}
-
-/* Banner Media Queris */
-
-.banner {
-    padding: 64px 0 2rem 0;
-    min-height: auto;
-}
-
-.banner__container {
-    flex-direction: column;
-}
-
-.banner__container img {
-    height: auto;
-    width: 100%;
-    border-radius: 0px;
-    object-fit: cover;
-    flex: 1 0 50%;
-}
-
-.banner__text {
-    flex: 1 1 auto;
-    display: contents;
-    width: 100% !important;
-    padding: 2rem 1rem 1rem 1rem;
-    text-align: center;
-}
-
-.banner__text h2 {
-    font-size: 2rem;
-    padding-top: 1rem;
-}
-
-.banner__text h4 {
-    font-size: 1rem;
-    margin-bottom: 2.5rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.button {
-    width: 50%;
-}
-
-.banner__text .button a {
-    padding: 1rem 10%;
-    transition: none;
-    width: 100%;
-}
-
-.banner__text .button a:hover {
-    padding: 1rem 10%;
-    font-weight: normal;
-    font-size: 1.1rem;
-}
-
-.container {
-    display: contents;
-}
-
-.main__post {
-    display: none;
-}
-
-.side__posts {
-    width: 100%;
-    padding: 1rem 1rem 2rem 1rem;
-    gap: 3rem;
-}
-
-.post__img {
-    display: none;
-}
-
-.post-mobile {
-    display: block;
-    width: 100%;
-}
-
-.side__post {
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.post__text {
-    padding: 1rem 0 0 1rem;
-}
-
-.side__post:hover {
-    color: #263159;
-    background-color: #fffbeb;
-    padding: 0;
-    cursor: pointer;
-    transform: scale(0.95);
-}
-
-}
-
-@media only screen and (max-width: 1100px) {
-
-.banner__container img {
-    flex: 1 0 50%;
-}
+@media only screen and (min-width: 841px) and (max-width: 1100px) {
+    .banner__container img {
+        flex: 1 0 50%;
+    }
 
     .banner__text {
         width: 50%;
     }
 
+    .main__post {
+        width: 50%
+    }
+    .side__posts {
+        width: 50%;
+    }
 }
-    
+
+@media only screen and (min-height: 1200px) {
+    .banner {
+        min-height: auto;
+    }
+
+    .banner__container img {
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+@media only screen and (min-width: 1100px) {
+    .banner__text {
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* Courses Media Queris */
+
+    .course__img__container, .course__text__container {
+        display: none;
+    }
+
+    .course-mobile {
+        display: block;
+    }
+
+    .courses__container {
+        width: 100%;
+        grid-template: repeat(6, 1fr) / repeat(1, 1fr);
+        padding: 1rem 1rem 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .course__container {
+        padding: 1rem 0 1rem 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+
+
