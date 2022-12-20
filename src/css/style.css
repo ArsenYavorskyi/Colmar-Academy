@@ -107,6 +107,11 @@ h4 {
     font-weight: bold;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 /* Header styling */
 
 .header__mobile {
@@ -116,9 +121,7 @@ h4 {
 .header__desktop {
     width: 100%;
     height: 64px;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 24px;
     border-bottom: black solid 1px;
     position: fixed;
@@ -129,8 +132,6 @@ h4 {
 }
 
 .logo__container {
-    display: flex;
-    align-items: center;
     gap: 10px;
 }
 
@@ -139,10 +140,8 @@ h4 {
 }
 
 .menu {
-    display: flex;
     gap: 16px;
     justify-content: space-between;
-    align-items: center;
     font-size: 0.9rem;
 }
 
@@ -181,16 +180,12 @@ h4 {
 .banner {
     padding: 6rem 0 2rem 1.5rem;
     background-color: #495579;
-    /* display: flex;
-    width: 100%; */
-    display: flex;
     min-height: 100vh;
+    align-items: stretch;
 }
 
 .banner__container {
-    display: flex;
     width: 100%;
-    align-items: center;
     justify-content: flex-start;
 }
 
@@ -203,8 +198,6 @@ h4 {
 }
 
 .banner__text {
-    /* flex: 1 1 40%; */
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 40%;
@@ -239,7 +232,7 @@ h4 {
 .banner__text .button a:hover {
     background-color: #fffbeb;
     color: #495579;
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     font-weight: bold;
     padding: 1.25rem 7rem;
     box-shadow: 0.2px 0.2px 0.3px hsl(228deg 33% 13% / 0.23),
@@ -255,10 +248,8 @@ h4 {
 .banner__text .button a:active {
     color: #fffbeb;
     background-color: #263159;
-    transition-property: background, color;
-    transition-duration: 0s;
-    transition-timing-function: linear;
-    transition-delay: 0s;
+    transition: background-color 0s linear 0s,
+                color 0s linear 0s;
 }
 
 /* Posts Styling */
@@ -619,6 +610,9 @@ footer {
         padding: 1rem 0 1rem 0.5rem;
         height: auto;
         display: block;
+        background-color: #fffbeb;
+        border-top: 1px solid #495579;
+        color: #495579;
     }
     
 }
