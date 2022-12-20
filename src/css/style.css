@@ -232,7 +232,6 @@ h4 {
 .banner__text .button a:hover {
     background-color: #fffbeb;
     color: #495579;
-    /* font-size: 1.3rem; */
     font-weight: bold;
     padding: 1.25rem 7rem;
     box-shadow: 0.2px 0.2px 0.3px hsl(228deg 33% 13% / 0.23),
@@ -566,10 +565,6 @@ footer {
         cursor: pointer;
         transform: scale(0.95);
     }
-
-    /* .course__text__container p {
-        display: none;
-    } */
 
     .courses__container {
         grid-template: repeat(2, 1fr) / repeat(2, 1fr);
