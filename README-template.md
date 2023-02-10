@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Live Site URL: [https://yazdrahobycha.github.io/Colmar-Academy/](https://yazdrahobycha.github.io/Colmar-Academy/)
 
 ## My process
 
@@ -52,11 +52,12 @@ The fullscreen banner was a particular highlight of the project for me. I was ab
 <details>
 <summary>HTMl</summary>
 ```html
+
 <div class="banner flex">
     <div class="banner__container flex">
         <img
             class="banner__img"
-            src="src/img/banner.jpg"
+            src="img/banner.jpg"
             alt="girl siiting on the desk"
         />
         <div class="banner__text flex">
