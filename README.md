@@ -1,6 +1,6 @@
 # CodeAcademy - "Colmar Academy" Final Project
 
-This is a solution to the ['Colmar Academy' final project in CodeAcademy Course 'Build a Website with HTML, CSS, and Github Pages'](https://join.codecademy.com/learn/paths/learn-how-to-build-websites/).
+This is a solution to the 'Colmar Academy' final project in CodeAcademy Course ['Build a Website with HTML, CSS, and Github Pages'](https://join.codecademy.com/learn/paths/learn-how-to-build-websites/).
 
 ## Table of contents
 
