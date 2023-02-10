@@ -51,8 +51,8 @@ The fullscreen banner was a particular highlight of the project for me. I was ab
 
 <details>
 <summary>HTMl</summary>
-```html
 
+```html
 <div class="banner flex">
     <div class="banner__container flex">
         <img
